@@ -1,0 +1,19 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<h2>Add Task</h2>
+
+<div class="form-box">
+<form method="POST">
+    {% csrf_token %}
+
+    <label>Title:</label><br>
+    {{ form.title }}<br><br>
+
+    <label>Description:</label><br>
+    {{ form.description }}<br><br>
+
+    <button type="submit" class="save-btn">Save Task</button>
+</form>
+</div>
+<a href="/" class="back-btn">← Back</a>
